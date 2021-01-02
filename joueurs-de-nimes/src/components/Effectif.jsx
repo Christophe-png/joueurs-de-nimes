@@ -2,7 +2,7 @@ import Joueur from "./Joueur";
 import "./Joueur.css";
 
 const Effectif = (props) => (
-  <section className="Effectif">
+  <div>
     {props.joueurs.map((singleJoueur) => (
       <Joueur
         key={singleJoueur.id}
@@ -13,7 +13,7 @@ const Effectif = (props) => (
         poste={singleJoueur.poste}
       />
     ))}
-  </section>
+  </div>
 );
 
 export default Effectif;
