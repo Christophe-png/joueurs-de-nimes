@@ -2,7 +2,7 @@ import Joueur from "./Joueur";
 import "./Joueur.css";
 
 const Effectif = (props) => (
-  <section className="ListeMiels">
+  <section className="Effectif">
     {props.joueurs.map((singleJoueur) => (
       <Joueur
         key={singleJoueur.id}
