@@ -19,7 +19,8 @@ class App extends Component {
       )
       .then((response) => response.data)
       .then((data) => {
-        this.setState({ joueurs: data });
+        console.log(data[Object.keys(data)[0]]);
+        this.setState({ joueurs: data[Object.keys(data)[0]] });
       });
   }
   render() {

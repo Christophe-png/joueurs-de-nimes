@@ -6,15 +6,15 @@ function Joueur(props) {
   return (
     <div className="Joueur">
       <h3>{nom}</h3>
-      {/*<img className="Miel-picture" src={image} alt="Nom du miel" />*/}
+      {<img className="Miel-picture" src={image} alt="Nom du miel" />}
       <div
         className="Honey"
         style={{ backgroundImage: "url(" + image + ")" }}
       ></div>
-      <p>{nom}</p>
-      <p>{age}</p>
-      <p>{né}</p>
-      <p>{poste}</p>
+      <p>Nom : {nom}</p>
+      <p>Age : {age}</p>
+      <p>Né à : {né}</p>
+      <p>Poste : {poste}</p>
     </div>
   );
 }
