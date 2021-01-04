@@ -11,7 +11,6 @@ function Joueur(props) {
         className="Honey"
         style={{ backgroundImage: "url(" + image + ")" }}
       ></div>
-      <p>Nom : {nom}</p>
       <p>Age : {age}</p>
       <p>Né à : {né}</p>
       <p>Poste : {poste}</p>
