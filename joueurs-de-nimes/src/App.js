@@ -15,7 +15,7 @@ class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://my-json-server.typicode.com/Christophe-png/effectif-nimes-olympique/db"
+        "https://my-json-server.typicode.com/Christophe-png/joueurs-de-nimes/blob/master/joueurs-de-nimes/src/db.json"
       )
       .then((response) => response.data)
       .then((data) => {
