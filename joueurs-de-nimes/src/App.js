@@ -15,12 +15,12 @@ class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://my-json-server.typicode.com/Christophe-png/effectif-nimes-olympique/db"
+        "https://my-json-server.typicode.com/Christophe-png/effectif-nimes-olympique/effectif-2020-2021"
       )
       .then((response) => response.data)
       .then((data) => {
-        console.log(data[Object.keys(data)[0]]);
-        this.setState({ joueurs: data[Object.keys(data)[0]] });
+        console.log(data);
+        this.setState({ joueurs: data });
       });
   }
   render() {
