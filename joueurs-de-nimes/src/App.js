@@ -11,7 +11,15 @@ import "./App.css";
 class App extends Component {
   state = {
     joueurs: [],
+    posteFilter: "",
   };
+
+  handleChangePoste = (event) => {
+    this.setState({
+      posteFilter: event.target.value,
+    });
+  };
+
   componentDidMount() {
     axios
       .get(
@@ -24,12 +32,30 @@ class App extends Component {
       });
   }
   render() {
-    const { joueurs } = this.state;
-
+    const { joueurs, posteFilter } = this.state;
+    const filteredJoueurs =
+      posteFilter === ""
+        ? joueurs
+        : joueurs.filter((joueur) => joueur.poste === posteFilter);
     return (
       <div className="App">
         <Router>
           <Header />
+          <div>
+            <label htmlFor="posteSelect">
+              <select
+                id="posteSelect"
+                value={posteFilter}
+                onChange={this.handleChangePoste}
+              >
+                <option value="">&mdash;</option>
+                <option value="Gardiens">Gardiens</option>
+                <option value="Défenseurs">Défenseurs</option>
+                <option value="Milieux de Terrain">Milieux de Terrain</option>
+                <option value="Attaquants">Attaquants</option>
+              </select>
+            </label>
+          </div>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/effectif" component={Effectif} />
@@ -37,7 +63,7 @@ class App extends Component {
             <Route path="/articles" component={Articles} />
             <HomePage />
           </Switch>
-          <Effectif joueurs={joueurs} />
+          <Effectif joueurs={filteredJoueurs} />
         </Router>
       </div>
     );
