@@ -6,7 +6,7 @@ import Joueur from "./components/Joueur";
 import Articles from "./components/Articles";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import "./App.css";
+import "./App.css";
 
 class App extends Component {
   state = {
