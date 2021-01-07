@@ -11,7 +11,7 @@ import "./App.css";
 class App extends Component {
   state = {
     joueurs: [],
-    posteFilter: "",
+    posteFilter: " ",
   };
 
   handleChangePoste = (event) => {
@@ -43,6 +43,7 @@ class App extends Component {
           <Header />
           <div>
             <label htmlFor="posteSelect">
+              Poste{" "}
               <select
                 id="posteSelect"
                 value={posteFilter}
