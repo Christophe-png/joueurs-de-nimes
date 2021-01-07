@@ -1,0 +1,7 @@
+.Joueur {
+  width: 32%;
+}
+
+.Joueur img {
+  max-width: 150px;
+}

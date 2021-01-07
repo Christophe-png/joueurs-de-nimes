@@ -1,8 +1,9 @@
+import React from "react";
 import Joueur from "./Joueur";
-import "./Joueur.css";
+import "./Effectif.css";
 
 const Effectif = (props) => (
-  <div>
+  <div className="Effectif">
     {props.joueurs.map((singleJoueur) => {
       console.log(singleJoueur);
       return (
