@@ -22,7 +22,7 @@ function Header() {
         </li>
         <li>
           <Link className="nav-articles" to="/articles">
-            "Les crocos à travares l'histoire !"
+            "Les crocos à travers l'histoire !"
           </Link>
         </li>
       </ul>
